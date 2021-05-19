@@ -7,7 +7,7 @@ Engine_Bandpass : CroneEngine {
 
   alloc {
     SynthDef(\Filter, {
-      arg inL, inR, out, freq=440.0, bandWidth=1.0, inputGain=1.0;
+      arg inL, inR, out, freq=440.0, bandWidth=1.0;
       var in, sig;
       
       in = [In.ar(inL), In.ar(inR)];
