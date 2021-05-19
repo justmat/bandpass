@@ -35,7 +35,7 @@ Engine_Bandpass : CroneEngine {
     });
     
     this.addCommand("bandWidth", "f", {|msg|
-      synth.set(\res, msg[1]);
+      synth.set(\bandWidth, msg[1]);
     }); 
 
   }
@@ -44,4 +44,3 @@ Engine_Bandpass : CroneEngine {
     synth.free;
   }
 }
-
