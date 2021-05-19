@@ -1,11 +1,4 @@
--- phyllis
---
--- a digitally modeled
--- analog filter
---
--- built around the DFM1
--- supercollider ugen, and
--- some softclipping.
+-- bandpass filter
 --
 -- ----------
 --
@@ -138,9 +131,9 @@ end
 function enc(n, d)
   -- filter controls
   if n == 2 then
-    params:delta("freq", d)
+    params:delta("freq", d / 10)
   elseif n == 3 then
-    params:delta("band_width", d)
+    params:delta("band_width", d / 10)
   end
 end
 
@@ -164,3 +157,4 @@ function redraw()
 
   screen.update()
 end
+
